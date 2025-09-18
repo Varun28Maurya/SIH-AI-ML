@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guardian Login</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { 
+      margin: 0; 
+      font-family: Arial, sans-serif; 
+      background: linear-gradient(to bottom right, #f3e8ff, #ede9fe); 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh; 
+    }
+    .card { 
+      background: white; 
+      padding: 2rem; 
+      border-radius: 1.5rem; 
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
+      width: 350px; 
+      text-align: center; 
+    }
+    .icon { 
+      width: 50px; 
+      height: 50px; 
+      color: #7e22ce; 
+      margin-bottom: 1rem; 
+    }
+    input { 
+      width: 100%; 
+      padding: 10px; 
+      margin: 8px 0; 
+      border-radius: 0.5rem; 
+      border: 1px solid #ccc; 
+    }
+    .password-field { 
+      position: relative; 
+    }
+    .toggle-eye { 
+      position: absolute; 
+      right: 10px; 
+      top: 12px; 
+      cursor: pointer; 
+    }
+    button { 
+      width: 100%; 
+      padding: 10px; 
+      margin-top: 12px; 
+      background: #7e22ce; 
+      color: white; 
+      border: none; 
+      border-radius: 9999px; 
+      cursor: pointer; 
+      font-weight: bold; 
+      transition: background 0.3s; 
+    }
+    button:hover { 
+      background: #581c87; 
+    }
+    .forgot { 
+      display: block; 
+      margin-top: 8px; 
+      font-size: 0.9rem; 
+      color: #7e22ce; 
+      text-decoration: none; 
+    }
+    .forgot:hover { 
+      text-decoration: underline; 
+    }
+    .back { 
+      display: inline-block; 
+      margin-top: 10px; 
+      font-size: 0.9rem; 
+      color: #6b7280; 
+      text-decoration: none; 
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <i data-lucide="shield" class="icon"></i>
+    <h2>Guardian Login</h2>
+    <input type="text" placeholder="Registered Phone / Email" />
+    <div class="password-field">
+      <input type="password" id="guardian-password" placeholder="Password" />
+      <i data-lucide="eye" class="toggle-eye" onclick="togglePassword('guardian-password', this)"></i>
+    </div>
+    <button>Login</button>
+    <a href="#" class="forgot">Forgot Password?</a>
+    <a href="/" class="back">← Back to Home</a>
+  </div>
+
+  <script>
+    lucide.createIcons();
+    function togglePassword(id, el) {
+      const input = document.getElementById(id);
+      if (input.type === "password") {
+        input.type = "text";
+        el.setAttribute("data-lucide", "eye-off");
+      } else {
+        input.type = "password";
+        el.setAttribute("data-lucide", "eye");
+      }
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>
