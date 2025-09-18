@@ -7,21 +7,21 @@ export default function LandingPage() {
       title: "Student",
       icon: <GraduationCap className="w-10 h-10 text-blue-500" />,
       desc: "Access courses, track progress, and get mentorship.",
-      link: "/LoginPortal.html", // Student Login Portal
+      link: "/Student_Login_Portal.html", // Student Login Portal
       color: "from-blue-100 to-blue-50",
     },
     {
       title: "Mentor",
       icon: <Users className="w-10 h-10 text-green-500" />,
       desc: "Guide students, share resources, and monitor growth.",
-      link: "/MentorPortal.html", // Mentor Login Portal
+      link: "/Mentor_Login_Portal.html", // Mentor Login Portal
       color: "from-green-100 to-green-50",
     },
     {
       title: "Guardian",
       icon: <Shield className="w-10 h-10 text-purple-500" />,
       desc: "Stay informed about student performance and progress.",
-      link: "/GuardianPortal.html", // Guardian Login Portal
+      link: "/Guardian_Login_Portal.html", // Guardian Login Portal
       color: "from-purple-100 to-purple-50",
     },
   ];
