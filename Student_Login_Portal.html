@@ -1,4 +1,3 @@
-<!--This is a student login portal -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,6 +60,16 @@
     button:hover {
       background: #1e40af;
     }
+    .forgot {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: #2563eb;
+      text-decoration: none;
+    }
+    .forgot:hover {
+      text-decoration: underline;
+    }
     .back {
       display: inline-block;
       margin-top: 10px;
@@ -80,6 +89,7 @@
       <i data-lucide="eye" class="toggle-eye" onclick="togglePassword('student-password', this)"></i>
     </div>
     <button>Login</button>
+    <a href="#" class="forgot">Forgot Password?</a>
     <a href="/" class="back">← Back to Home</a>
   </div>
 
